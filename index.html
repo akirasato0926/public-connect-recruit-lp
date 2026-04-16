@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUBLIC CONNECT 採用サイト</title>
+  <meta
+    name="description"
+    content="公共の可能性をひらく。PUBLIC CONNECTの採用専用ランディングページ。"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="site-header glass">
+    <div class="container nav-inner">
+      <a class="logo" href="#top">PUBLIC CONNECT</a>
+      <nav class="site-nav">
+        <a href="#challenges">Challenge</a>
+        <a href="#data-analysis">Data</a>
+        <a href="#purpose">Purpose</a>
+        <a href="#values">Values</a>
+        <a href="#service">Service</a>
+        <a href="#traction">Traction</a>
+        <a href="#municipalities">導入マップ</a>
+      </nav>
+      <a class="btn btn-sm" href="#contact">エントリーする</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Recruit Landing Page</p>
+          <h1>
+            <span class="gradient-text">公共の可能性をひらく</span>
+          </h1>
+          <p class="lead">
+            PUBLIC CONNECTは、官公庁・自治体の採用活動を
+            「認知・集客・選考・内定」まで一気通貫で支えるプラットフォームです。
+            社会インパクトの大きいプロダクトを、最高のUI/UXで届ける仲間を募集しています。
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#contact">採用に応募する</a>
+            <a class="btn btn-ghost" href="#service">サービスを知る</a>
+          </div>
+        </div>
+        <div class="hero-panel glass reveal" data-tilt>
+          <p class="panel-label">Now Scaling</p>
+          <div class="kpi-grid">
+            <article>
+              <h3 data-counter="360">0</h3>
+              <p>導入団体数</p>
+            </article>
+            <article>
+              <h3 data-counter="47">0</h3>
+              <p>全都道府県で利用</p>
+            </article>
+            <article>
+              <h3 data-counter="2023">0</h3>
+              <p>サービス開始</p>
+            </article>
+            <article>
+              <h3 data-counter="2000">0</h3>
+              <p>PRコンテンツ制作実績</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="challenges" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Challenge</p>
+          <h2>官公庁・自治体採用の構造課題</h2>
+          <p>
+            パブリックコネクトは、資料で示された採用市場の悪化を最重要課題として捉えています。
+            「応募者減少」「早期離職増」「応募前体験の不足」に対して、採用専用体験を再設計しています。
+          </p>
+        </div>
+        <div class="challenge-kpis">
+          <article class="card glass reveal">
+            <p class="kpi-caption">地方公務員試験 受験者数（10年）</p>
+            <h3>59万人 → 42万人</h3>
+            <p class="accent">約16万人減少</p>
+            <div class="bar-compare">
+              <span style="--w: 100%"></span>
+              <span style="--w: 71%"></span>
+            </div>
+          </article>
+          <article class="card glass reveal">
+            <p class="kpi-caption">20代普通退職者（10年）</p>
+            <h3>1,564人 → 4,244人</h3>
+            <p class="accent">2.7倍に増加</p>
+            <div class="bar-compare">
+              <span style="--w: 37%"></span>
+              <span style="--w: 100%"></span>
+            </div>
+          </article>
+          <article class="card glass reveal">
+            <p class="kpi-caption">採用HPの影響</p>
+            <h3>88.1%</h3>
+            <p class="accent">印象が悪いと志望度が下がる</p>
+            <div class="single-meter">
+              <span style="--w: 88.1%"></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="data-analysis" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Data Analysis</p>
+          <h2>課題データをもとにした採用環境の分析</h2>
+          <p>
+            PDF資料で提示された官公庁採用データを、推移と構成比で可視化しました。
+            応募母集団の縮小と、採用広報体験の影響が同時に進行していることが分かります。
+          </p>
+        </div>
+        <div class="analysis-grid">
+          <article class="glass chart-card reveal">
+            <h3>総務省データ: 普通退職者数の実測推移（一般行政職）</h3>
+            <canvas id="challengeBarChart" aria-label="総務省の普通退職者数の棒グラフ"></canvas>
+          </article>
+          <article class="glass chart-card reveal">
+            <h3>総務省データ: 前年比増減率の実測推移</h3>
+            <canvas id="challengeLineChart" aria-label="総務省の普通退職者数の前年比折れ線グラフ"></canvas>
+          </article>
+        </div>
+        <p class="source-note reveal">
+          出典: 総務省「地方公務員の退職状況等調査（各年度）」一般行政職の普通退職者数（在職期間の通算を伴う退職者等を除く）
+        </p>
+      </div>
+    </section>
+
+    <section id="pdf-insights" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">PDF Insights</p>
+          <h2>資料ハイライト</h2>
+          <p>ご共有資料のビジュアルをもとに、サービス世界観と会社メッセージをLPに反映しています。</p>
+        </div>
+        <div class="pdf-gallery">
+          <figure class="glass pdf-card reveal">
+            <img src="./assets/pdf-images/service-doc-cover.png" alt="サービス説明資料の表紙" loading="lazy" />
+            <figcaption>サービス説明資料</figcaption>
+          </figure>
+          <figure class="glass pdf-card reveal">
+            <img src="./assets/pdf-images/company-brochure-cover.png" alt="会社紹介パンフレットの表紙" loading="lazy" />
+            <figcaption>会社紹介パンフレット</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="purpose" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Purpose</p>
+          <h2>公共の可能性をひらく</h2>
+          <p>
+            私たちは、公共を支える存在に寄り添い、ひらかれた公共を実現します。
+            「官公庁・自治体で働く選択肢がもっと当たり前の社会」を本気でつくるチームです。
+          </p>
+        </div>
+        <div class="value-grid">
+          <article class="card glass reveal">
+            <h3>社会課題に向き合う</h3>
+            <p>受験者数減少・若手離職増加という構造課題に、プロダクトで挑みます。</p>
+          </article>
+          <article class="card glass reveal">
+            <h3>体験を設計する</h3>
+            <p>応募者視点で「見やすさ」「情報量」「更新性」を徹底した採用体験を提供します。</p>
+          </article>
+          <article class="card glass reveal">
+            <h3>現場に伴走する</h3>
+            <p>自治体ごとの採用課題に寄り添い、システムとプロデュースを一体で支援します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="values" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Our Values</p>
+          <h2>わたしたちの行動指針</h2>
+        </div>
+        <div class="value-grid">
+          <article class="card glass reveal">
+            <h3>広げる</h3>
+            <p>枠を超えて思考し、公共の可能性をひらく。発言と行動に責任を持つ。</p>
+          </article>
+          <article class="card glass reveal">
+            <h3>伴走する</h3>
+            <p>顧客の課題を自分事として捉え、成功に向けて誠実に向き合い続ける。</p>
+          </article>
+          <article class="card glass reveal">
+            <h3>こだわる</h3>
+            <p>手段の完遂ではなく本質成果にこだわり、プロとして品質に責任を持つ。</p>
+          </article>
+          <article class="card glass reveal">
+            <h3>たくらむ</h3>
+            <p>制約を前向きに捉え、アセットをフル活用して大胆に課題を解く。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="service" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Service</p>
+          <h2>採用のすべてを、ひとつの体験へ</h2>
+        </div>
+        <div class="bento-grid">
+          <article class="bento glass reveal">
+            <h3>採用専用ページ</h3>
+            <p>スマホ最適化された採用ページで、仕事内容・魅力・応募導線を統合。</p>
+          </article>
+          <article class="bento glass reveal">
+            <h3>応募受付・選考管理</h3>
+            <p>エントリーフォーム、メッセージ、ステータス管理を直感的なUIで一元化。</p>
+          </article>
+          <article class="bento glass reveal">
+            <h3>集客オートメーション</h3>
+            <p>求人検索サイト連携や自然検索対策で、届けるべき人材に情報を届ける。</p>
+          </article>
+          <article class="bento glass reveal">
+            <h3>採用プロデュース</h3>
+            <p>リクルーティングプロデューサーが戦略設計から実行まで伴走。</p>
+          </article>
+          <article class="bento glass reveal">
+            <h3>PRコンテンツ制作</h3>
+            <p>ブログ・動画・クリエイティブを活用し、応募動機の解像度を高める。</p>
+          </article>
+          <article class="bento glass reveal">
+            <h3>セキュアな運用</h3>
+            <p>ISMAP登録クラウド（AWS）基盤、WAFや暗号化通信で安心運用。</p>
+          </article>
+        </div>
+        <div class="service-mock-grid">
+          <figure class="glass mock-card reveal">
+            <img src="./assets/pdf-images/service-mock-flow.png" alt="採用ページ導線のサービスモック" loading="lazy" />
+            <figcaption>採用ページ導線改善イメージ</figcaption>
+          </figure>
+          <figure class="glass mock-card reveal">
+            <img src="./assets/pdf-images/service-mock-job-posting.png" alt="求人作成画面のサービスモック" loading="lazy" />
+            <figcaption>求人作成UI（テンプレート・複製・プレビュー）</figcaption>
+          </figure>
+          <figure class="glass mock-card reveal">
+            <img src="./assets/pdf-images/service-mock-entry-form.png" alt="エントリーフォームのサービスモック" loading="lazy" />
+            <figcaption>エントリーフォーム最適化イメージ</figcaption>
+          </figure>
+          <figure class="glass mock-card reveal">
+            <img src="./assets/pdf-images/service-mock-screening.png" alt="選考管理画面のサービスモック" loading="lazy" />
+            <figcaption>選考管理ダッシュボードイメージ</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="traction" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Traction</p>
+          <h2>全国で広がる、採用変革の実績</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item glass reveal">
+            <span>2023.08</span>
+            <h3>サービス提供開始</h3>
+            <p>官公庁・自治体向け採用プラットフォームとしてローンチ。</p>
+          </article>
+          <article class="timeline-item glass reveal">
+            <span>2025.04</span>
+            <h3>有償化開始</h3>
+            <p>継続利用と実運用を前提に、サービスをさらに強化。</p>
+          </article>
+          <article class="timeline-item glass reveal">
+            <span>2026.03</span>
+            <h3>360自治体突破</h3>
+            <p>47都道府県で導入。全国規模で採用DXを推進。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="municipalities" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Municipalities</p>
+          <h2>導入自治体マップ（都道府県ヒート）</h2>
+          <p>
+            導入団体数は<span class="accent">360自治体</span>。
+            都道府県ごとの導入数に応じて濃く表示され、ホバーで自治体一覧を確認できます。
+          </p>
+        </div>
+        <div class="map-layout reveal">
+          <div id="prefectureMap" class="map-wrap glass parallax-item" aria-label="導入自治体の都道府県マップ"></div>
+          <aside class="pref-panel glass">
+            <h3 id="prefTitle">都道府県にカーソルを合わせてください</h3>
+            <p id="prefCount" class="pref-count">導入団体数: -</p>
+            <ul id="prefMunicipalityList" class="pref-list"></ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="jobs">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Join Us</p>
+          <h2>募集ポジション（例）</h2>
+        </div>
+        <div class="job-grid">
+          <article class="job-card glass reveal">
+            <h3>Product Designer</h3>
+            <p>採用体験の情報設計、UI設計、プロトタイピング、改善施策の実行。</p>
+          </article>
+          <article class="job-card glass reveal">
+            <h3>Frontend Engineer</h3>
+            <p>高品質なインタラクション実装、デザインシステム構築、パフォーマンス改善。</p>
+          </article>
+          <article class="job-card glass reveal">
+            <h3>Product Manager</h3>
+            <p>自治体ニーズを起点とした機能企画、優先度設計、価値検証の推進。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-panel glass reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>公共の未来を、一緒につくる</h2>
+        <p>まずはカジュアル面談から。ミッション・プロダクト・働き方を丁寧にご紹介します。</p>
+        <div class="hero-cta">
+          <a class="btn" href="https://public-connect.jp" target="_blank" rel="noreferrer">公式サイトを見る</a>
+          <a class="btn btn-ghost" href="https://public-connect.jp" target="_blank" rel="noreferrer">採用について問い合わせる</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© PUBLIC CONNECT Inc. All Rights Reserved.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

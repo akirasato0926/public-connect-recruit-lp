@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recruit Funnel Dashboard Mock</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="mock-page">
+    <section class="mock-shell">
+      <header class="mock-topbar">
+        <div>
+          <p class="eyebrow">Recruit</p>
+          <h1>採用ファネルダッシュボード</h1>
+          <p class="lead">求人ごとの採用進捗、離脱ポイント、優先対応求人を一画面で確認するための UI モックです。</p>
+        </div>
+        <div class="topbar-actions">
+          <span class="chip">2026年度</span>
+          <span class="chip">春募集</span>
+          <button class="primary-btn" type="button">CSV出力</button>
+        </div>
+      </header>
+
+      <section class="filters">
+        <span class="filter">年度: 2026</span>
+        <span class="filter">募集回: 春募集</span>
+        <span class="filter">職種: 一般行政職</span>
+        <span class="filter">部署: 採用企画室</span>
+        <span class="filter">求人状態: 公開中</span>
+      </section>
+
+      <section class="kpi-grid">
+        <article class="kpi-card">
+          <p>全体目標人数</p>
+          <h2>35</h2>
+          <span>3求人合計</span>
+        </article>
+        <article class="kpi-card">
+          <p>承諾数</p>
+          <h2>19</h2>
+          <span>前週比 +3</span>
+        </article>
+        <article class="kpi-card is-alert">
+          <p>充足率</p>
+          <h2>54%</h2>
+          <span>要注意求人あり</span>
+        </article>
+        <article class="kpi-card">
+          <p>平均通過率</p>
+          <h2>47%</h2>
+          <span>前年差 +5pt</span>
+        </article>
+      </section>
+
+      <section class="main-grid">
+        <article class="panel">
+          <div class="panel-head">
+            <h3>アラート</h3>
+            <span>3件</span>
+          </div>
+          <ul class="alert-list">
+            <li><strong>求人A</strong><span>充足率 40% / 閾値 50%</span></li>
+            <li><strong>求人C</strong><span>一次面接滞留 7日超が 12件</span></li>
+            <li><strong>求人B</strong><span>面接日程直前の未確定応募者 5件</span></li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h3>全体ファネル</h3>
+            <span>Entry to Accept</span>
+          </div>
+          <div class="funnel-steps">
+            <div class="funnel-step"><strong>420</strong><span>Entry</span></div>
+            <div class="funnel-step"><strong>248</strong><span>1st</span></div>
+            <div class="funnel-step"><strong>121</strong><span>2nd</span></div>
+            <div class="funnel-step"><strong>48</strong><span>Offer</span></div>
+            <div class="funnel-step"><strong>19</strong><span>Accept</span></div>
+          </div>
+          <div class="funnel-bars">
+            <span style="--size: 100%"></span>
+            <span style="--size: 59%"></span>
+            <span style="--size: 29%"></span>
+            <span style="--size: 11%"></span>
+            <span style="--size: 5%"></span>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h3>求人別サマリー</h3>
+          <span>優先順位順</span>
+        </div>
+        <div class="summary-grid">
+          <article class="summary-card is-risk">
+            <div class="summary-head"><h4>求人A / 一般行政職</h4><span>High Risk</span></div>
+            <p>目標 10 / 承諾 4 / 充足率 40%</p>
+            <div class="summary-meta"><span>離脱率 38%</span><span>平均滞留 8.2日</span></div>
+          </article>
+          <article class="summary-card">
+            <div class="summary-head"><h4>求人B / 土木技術職</h4><span>Stable</span></div>
+            <p>目標 5 / 承諾 5 / 充足率 100%</p>
+            <div class="summary-meta"><span>離脱率 12%</span><span>平均滞留 4.1日</span></div>
+          </article>
+          <article class="summary-card is-risk">
+            <div class="summary-head"><h4>求人C / 福祉職</h4><span>Urgent</span></div>
+            <p>目標 8 / 承諾 2 / 充足率 25%</p>
+            <div class="summary-meta"><span>離脱率 41%</span><span>平均滞留 9.4日</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-grid">
+        <article class="panel">
+          <div class="panel-head">
+            <h3>求人別ファネル詳細</h3>
+            <span>求人A</span>
+          </div>
+          <div class="phase-table">
+            <div class="phase-row phase-head">
+              <span>フェーズ</span>
+              <span>人数</span>
+              <span>通過率</span>
+              <span>離脱率</span>
+              <span>滞留</span>
+            </div>
+            <div class="phase-row"><span>Entry</span><span>120</span><span>53%</span><span>18%</span><span>1.2日</span></div>
+            <div class="phase-row"><span>1st</span><span>64</span><span>44%</span><span>26%</span><span>4.8日</span></div>
+            <div class="phase-row"><span>2nd</span><span>28</span><span>43%</span><span>21%</span><span>6.2日</span></div>
+            <div class="phase-row"><span>Offer</span><span>12</span><span>33%</span><span>0%</span><span>2.4日</span></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h3>比較ビュー</h3>
+            <span>年度比較</span>
+          </div>
+          <div class="compare-list">
+            <div class="compare-row"><span>2024</span><div class="compare-track"><span style="--size: 38%"></span></div><strong>38%</strong></div>
+            <div class="compare-row"><span>2025</span><div class="compare-track"><span style="--size: 46%"></span></div><strong>46%</strong></div>
+            <div class="compare-row"><span>2026</span><div class="compare-track"><span style="--size: 54%"></span></div><strong>54%</strong></div>
+          </div>
+          <div class="insight-box">
+            <strong>示唆</strong>
+            <p>広報施策改善後、エントリー増と承諾率改善が同時に見えています。</p>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

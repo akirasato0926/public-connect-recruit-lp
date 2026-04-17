@@ -26,10 +26,12 @@ python3 -m http.server 8080
 
 （反映まで数分かかることがあります。404 のときはしばらく待ってから再読み込みしてください。）
 
-官公庁向け **UIモック一覧（静的）** は次から入れます（サーバ不要）。  
-**https://akirasato0926.github.io/public-connect-recruit-lp/recruit/mock/index.html**
+官公庁向け **UIモック**（サーバ不要）:
 
-旧・単体のファネルだけ見る場合: `recruit/mock/funnel-dashboard.html`
+- **一覧:** https://akirasato0926.github.io/public-connect-recruit-lp/recruit/mock/index.html  
+- **既存システム＋US新機能の位置づけ（推奨）:** https://akirasato0926.github.io/public-connect-recruit-lp/recruit/mock/employer-integration-map.html  
+
+ナビは本番 Nuxt の `MEMBER_RECRUITMENT` 相当のタブを再現し、**既存（求人・応募・ブログ等）** と **US で追加する分析系** の両方へ辿れます。
 
 ## フォルダ構成（主要）
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja" data-emp-page="mypage">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>モック: 官公庁情報（既存）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="employer-nav-mount"></div>
+  <p class="emp-back-hub"><a href="./employer-integration-map.html">← 全体マップ</a> · <a href="./index.html">モック一覧</a></p>
+  <main class="mock-page">
+    <section class="mock-shell">
+      <header class="mock-topbar">
+        <div>
+          <p class="eyebrow">既存機能</p>
+          <h1>官公庁情報</h1>
+          <p class="lead">本番ではプロフィール編集・ロゴ・窓口・公開範囲などを管理します（ダミー表示）。</p>
+        </div>
+        <div class="topbar-actions"><button class="primary-btn" type="button">保存（ダミー）</button></div>
+      </header>
+      <section class="main-grid">
+        <article class="panel">
+          <div class="panel-head"><h3>基本情報</h3><span>公開中</span></div>
+          <p style="line-height:1.7;color:var(--muted)">団体名: デモ市<br />所在地: 北海道デモ区1-1<br />採用問い合わせ: recruit@demo.local</p>
+        </article>
+        <article class="panel">
+          <div class="panel-head"><h3>公開プレビュー</h3><span>求職者向け</span></div>
+          <div class="chart-fake" style="height:80px"><span style="height:60%"></span><span style="height:45%"></span><span style="height:70%"></span></div>
+          <p class="lead" style="margin-top:0.5rem">LP 掲載イメージ（プレースホルダー）</p>
+        </article>
+      </section>
+    </section>
+  </main>
+  <script src="./employer-nav.js" defer></script>
+</body>
+</html>

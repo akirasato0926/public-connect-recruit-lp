@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja" data-emp-page="job-list">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>モック: 求人管理（既存）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="employer-nav-mount"></div>
+  <p class="emp-back-hub"><a href="./employer-integration-map.html">← 全体マップ</a></p>
+  <main class="mock-page">
+    <section class="mock-shell">
+      <header class="mock-topbar">
+        <div>
+          <p class="eyebrow">既存機能</p>
+          <h1>求人管理</h1>
+          <p class="lead">求人の作成・公開・複製・プレビュー。ファネル分析の集計単位にもなります。</p>
+        </div>
+        <div class="topbar-actions"><button class="primary-btn" type="button">新規求人</button></div>
+      </header>
+      <section class="panel">
+        <div class="panel-head"><h3>求人一覧</h3><span>3件</span></div>
+        <table class="data-table">
+          <thead>
+            <tr><th>求人名</th><th>職種</th><th class="num">応募</th><th>状態</th><th>更新</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>令和8年度 一般行政職</td><td>行政</td><td class="num">120</td><td>公開</td><td>2026/04/01</td></tr>
+            <tr><td>土木技術職（道路保全）</td><td>技術</td><td class="num">64</td><td>公開</td><td>2026/03/28</td></tr>
+            <tr><td>福祉専門職</td><td>福祉</td><td class="num">28</td><td>公開</td><td>2026/03/20</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+  </main>
+  <script src="./employer-nav.js" defer></script>
+</body>
+</html>

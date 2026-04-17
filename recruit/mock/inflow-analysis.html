@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-emp-page="inflow-analysis">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,10 +10,8 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <nav class="mock-chrome">
-    <a class="mock-back" href="./index.html">← モック一覧</a>
-    <span class="mock-badge">静的UIモック</span>
-  </nav>
+  <div id="employer-nav-mount"></div>
+  <p class="emp-back-hub"><a href="./index.html">← 静的モック一覧</a></p>
   <main class="mock-page">
     <section class="mock-shell">
       <header class="mock-topbar">
@@ -53,5 +51,6 @@
       </section>
     </section>
   </main>
+  <script src="./employer-nav.js" defer></script>
 </body>
 </html>

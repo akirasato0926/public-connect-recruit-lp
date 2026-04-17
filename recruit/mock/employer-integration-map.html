@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja" data-emp-page="integration-map">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>モック: 既存システムとUS新機能の統合ビュー</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="employer-nav-mount"></div>
+  <p class="emp-back-hub"><a href="./index.html">← 静的モック一覧（LP配下）</a></p>
+
+  <main class="emp-page-wrap">
+    <section class="mock-shell" style="margin-top:0.5rem">
+      <header class="mock-topbar" style="grid-template-columns:1fr">
+        <div>
+          <p class="eyebrow">Integration</p>
+          <h1>既存プロダクト × US新機能（採用分析系）</h1>
+          <p class="lead">
+            本番は <strong>Nuxt 官公庁コンソール</strong>に、もともとある求人・応募・コンテンツ機能の<strong>横</strong>へ、ユーザーストーリーで追加した<strong>分析・計画・AI支援</strong>の画面が並びます。
+            下はその位置づけを静的モックで示したものです（API 未接続）。
+          </p>
+        </div>
+      </header>
+
+      <div class="banner-note">
+        <strong style="color:var(--text)">開発の前提:</strong>
+        ソースは <code>Public-Connect-client-production</code>（画面）と <code>Public-Connect-api-production</code>（API）の既存モジュールへ追記・配線する形が今回のスコープです。
+      </div>
+
+      <div class="integration-grid">
+        <div class="integration-box legacy">
+          <h3>既存開発済み（運用コア）</h3>
+          <p class="lead">採用オペレーションの主幹。DB・API・画面が既に稼働している領域のイメージです。</p>
+          <ul class="alert-list">
+            <li><strong>官公庁プロフィール</strong><span>プロフィール・窓口情報</span></li>
+            <li><strong>求人・応募パイプライン</strong><span>求人票、エントリー、選考プロセス</span></li>
+            <li><strong>広報コンテンツ</strong><span>ブログ・動画、採用案内、お知らせ</span></li>
+            <li><strong>スケジュール</strong><span>面接・説明会などの予定管理</span></li>
+          </ul>
+          <p style="margin-top:0.75rem;font-size:0.88rem">
+            モック: <a href="./employer-mypage.html">官公庁情報</a> ·
+            <a href="./employer-job-list.html">求人管理</a> ·
+            <a href="./employer-applicant-list.html">応募者管理</a> ·
+            <a href="./employer-blog-list.html">ブログ</a> ·
+            <a href="./employer-news-list.html">採用案内</a> ·
+            <a href="./employer-calendar.html">予定管理</a>
+          </p>
+        </div>
+        <div class="integration-box us">
+          <h3>今回の US で追加・拡張する分析・支援系</h3>
+          <p class="lead">既存データ（応募・選考・求人閲覧・メール施策ログ等）を読み、<strong>可視化・比較・シミュレーション・AIブリーフ</strong>を提供する画面群です。</p>
+          <ul class="alert-list">
+            <li><strong>採用ファネル / 応募者分析</strong><span>KPI・属性・面接官メモ・フォロワー・ブログ効果</span></li>
+            <li><strong>母集団計画・流入・行動集計</strong><span>目標ギャップ、チャネル、匿名行動</span></li>
+            <li><strong>施策比較・AI採用支援</strong><span>通知/Webhook、週次レポート、フェーズ推定</span></li>
+          </ul>
+          <p style="margin-top:0.75rem;font-size:0.88rem">
+            モック: <a href="./funnel-dashboard.html">採用分析</a> ほかナビ右側のタブ群
+          </p>
+        </div>
+      </div>
+
+      <p class="integration-arrow" aria-hidden="true">↓</p>
+
+      <section class="panel">
+        <div class="panel-head"><h3>本番アーキテクチャ上のイメージ（論理）</h3><span>簡略化</span></div>
+        <pre class="textarea-mock" style="min-height:auto;white-space:pre-wrap;font-size:0.8rem">
+[ 既存 Client / Nuxt employer/* ]
+  ├─ 求人・応募・選考 …（従来どおり）
+  ├─ ブログ・案内・カレンダー …（従来どおり）
+  └─ 採用分析タブ群 …（今回追加した pages + 既存レイアウト）
+         │
+         ▼
+[ 既存 API / Nest employer モジュール ]
+  ├─ 既存エンドポイント（求人・応募者…）
+  └─ 新規・拡張 GET（ファネル、比較、ブリーフ、属性分析…）← TypeORM で集計
+         │
+         ▼
+[ PostgreSQL ] 既存テーブル（applicant, job, mass_emailing, log_web_hook …）
+        </pre>
+      </section>
+    </section>
+  </main>
+  <script src="./employer-nav.js" defer></script>
+</body>
+</html>

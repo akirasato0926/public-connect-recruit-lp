@@ -30,6 +30,11 @@ python3 -m http.server 8080
 
 - **一覧:** https://akirasato0926.github.io/public-connect-recruit-lp/recruit/mock/index.html  
 - **既存システム＋US新機能の位置づけ（推奨）:** https://akirasato0926.github.io/public-connect-recruit-lp/recruit/mock/employer-integration-map.html  
+- **営業向けストーリーUI（一枚スクロール）:**  
+  - https://akirasato0926.github.io/public-connect-recruit-lp/recruit/sales-ui/ （末尾 `/` 推奨）  
+  - 代替（リダイレクト）: https://akirasato0926.github.io/public-connect-recruit-lp/recruit/sales-ui-showcase.html  
+
+push 直後は GitHub Pages の反映に **1〜5 分**かかり、一時的に 404 になることがあります。数分待って再読み込みするか、上の「代替」URLを試してください。
 
 ナビは本番 Nuxt の `MEMBER_RECRUITMENT` 相当のタブを再現し、**既存（求人・応募・ブログ等）** と **US で追加する分析系** の両方へ辿れます。
 

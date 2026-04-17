@@ -1,0 +1,345 @@
+/* PUBLIC CONNECT 官公庁コンソール — 営業向けショーケース
+   トークン: Primary #0871E1 ほか tailwind.config 準拠 */
+:root {
+  --pc-primary: #0871e1;
+  --pc-primary-soft: #e6f1fc;
+  --pc-text: #1a1a1a;
+  --pc-muted: #5c656c;
+  --pc-border: #dadce0;
+  --pc-bg: #f0f4f8;
+  --pc-surface: #ffffff;
+  --pc-success: #0d7a3e;
+  --pc-warning: #c45c00;
+  --pc-danger: #e02d20;
+  --pc-radius: 16px;
+  --pc-shadow: 0 8px 32px rgba(8, 113, 225, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --font: "Noto Sans JP", "Hiragino Sans", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--pc-text);
+  background: var(--pc-bg);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--pc-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* —— 固定ナビ —— */
+.show-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--pc-border);
+  padding: 0.5rem 1rem;
+}
+
+.show-nav-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.show-brand {
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+
+.show-brand span {
+  color: var(--pc-primary);
+}
+
+.show-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.show-links a {
+  color: var(--pc-muted);
+  text-decoration: none;
+}
+
+.show-links a:hover {
+  color: var(--pc-primary);
+}
+
+/* —— セクション共通 —— */
+.show-section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 4.5rem 1.25rem 3.5rem;
+  scroll-margin-top: 72px;
+}
+
+.show-section--hero {
+  padding-top: 6rem;
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.show-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pc-primary);
+  margin: 0 0 0.75rem;
+}
+
+.show-h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.show-lead {
+  font-size: 1.05rem;
+  color: var(--pc-muted);
+  max-width: 52ch;
+  margin: 0 0 2rem;
+}
+
+.show-insight {
+  background: linear-gradient(135deg, var(--pc-primary-soft) 0%, #fff 55%);
+  border: 1px solid rgba(8, 113, 225, 0.2);
+  border-radius: var(--pc-radius);
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--pc-text);
+  margin-bottom: 2rem;
+  box-shadow: var(--pc-shadow);
+}
+
+.show-insight strong {
+  color: var(--pc-primary);
+}
+
+.show-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .show-grid--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .show-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* カード */
+.show-card {
+  background: var(--pc-surface);
+  border-radius: var(--pc-radius);
+  border: 1px solid var(--pc-border);
+  padding: 1.35rem;
+  box-shadow: var(--pc-shadow);
+}
+
+.show-card__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--pc-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+}
+
+.show-card__value {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.show-card__delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+.show-card__delta--up {
+  background: rgba(13, 122, 62, 0.12);
+  color: var(--pc-success);
+}
+
+.show-card__delta--down {
+  background: rgba(224, 45, 32, 0.1);
+  color: var(--pc-danger);
+}
+
+.show-card__delta--warn {
+  background: rgba(196, 92, 0, 0.12);
+  color: var(--pc-warning);
+}
+
+.show-card p {
+  margin: 0.75rem 0 0;
+  font-size: 0.88rem;
+  color: var(--pc-muted);
+  line-height: 1.5;
+}
+
+/* アラート帯 */
+.show-alert-strip {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.15rem;
+  border-radius: 12px;
+  background: #fff8f5;
+  border: 1px solid rgba(224, 45, 32, 0.25);
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.show-alert-strip strong {
+  color: var(--pc-danger);
+}
+
+/* ミニチャート（CSS） */
+.show-spark {
+  height: 48px;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-top: 0.75rem;
+}
+
+.show-spark span {
+  flex: 1;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(180deg, var(--pc-primary) 0%, #4a9eea 100%);
+  min-height: 8px;
+  opacity: 0.85;
+}
+
+.show-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 0.82rem;
+}
+
+.show-bar-row span:first-child {
+  width: 100px;
+  flex-shrink: 0;
+  color: var(--pc-muted);
+}
+
+.show-bar-track {
+  flex: 1;
+  height: 10px;
+  background: #e8ecf0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.show-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--pc-primary), #5aadf5);
+}
+
+/* ステップ / タイムライン */
+.show-steps {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.show-step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem;
+  background: var(--pc-surface);
+  border-radius: 12px;
+  border: 1px solid var(--pc-border);
+}
+
+.show-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--pc-primary);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.show-step h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+}
+
+.show-step p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--pc-muted);
+}
+
+/* フッター CTA */
+.show-footer-cta {
+  text-align: center;
+  padding: 3rem 1rem 4rem;
+  background: linear-gradient(180deg, #e8f2fc 0%, var(--pc-bg) 100%);
+}
+
+.show-footer-cta p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--pc-muted);
+}
+
+@media (max-width: 640px) {
+  .show-links {
+    display: none;
+  }
+}

@@ -42,3 +42,4 @@ python3 -m http.server 8080
 | `assets/` | データ等 |
 | `recruit/` | 採用ドキュメント・モック |
 | `recruit/figma-handoff/` | **営業/Figma用** トークン表・参照HTML・SVG（本番UI色に寄せた素材） |
+| `recruit/sales-ui/` | **官公庁向けストーリーUI** 一枚スクロール（`index.html` + `showcase.css`） |

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PUBLIC CONNECT — 官公庁コンソール 機能ショーケース</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="showcase.css" />
+  </head>
+  <body>
+    <nav class="show-nav" aria-label="セクション">
+      <div class="show-nav-inner">
+        <div class="show-brand">PUBLIC <span>CONNECT</span> 官公庁向け</div>
+        <div class="show-links">
+          <a href="#hero">トップ</a>
+          <a href="#funnel">ファネル</a>
+          <a href="#applicants">応募者</a>
+          <a href="#simulator">計画</a>
+          <a href="#inflow">流入</a>
+          <a href="#behavior">行動</a>
+          <a href="#measures">施策</a>
+          <a href="#ai">AI支援</a>
+          <a href="#ops">求人・応募</a>
+          <a href="#selection">選考・面接</a>
+          <a href="#content">広報</a>
+          <a href="#calendar">予定</a>
+          <a href="#profile">組織</a>
+          <a href="#billing">請求</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="show-section show-section--hero">
+      <p class="show-eyebrow">Government employer console</p>
+      <h1 class="show-h2" style="font-size: clamp(1.75rem, 4vw, 2.35rem)">
+        採用の「見えない損失」を、<br />データで止める。
+      </h1>
+      <p class="show-lead">
+        官公庁の採用は、母集団・選考・広報がバラバラに動くと、充足遅れと現場負荷が同時に膨らみます。PUBLIC
+        CONNECT は、計画から実行・検証までを一つのコンソールに載せ、意思決定のスピードを上げます。
+      </p>
+      <div class="show-insight">
+        <strong>刺さるポイント：</strong>
+        「何件応募が来たか」ではなく、<strong>どこで落ちているか・次に何をすべきか</strong>が一目でわかる画面構成です。
+      </div>
+      <div class="show-grid show-grid--3">
+        <div class="show-card">
+          <div class="show-card__label">充足見通し</div>
+          <div class="show-card__value">94%</div>
+          <div class="show-card__delta show-card__delta--up">▲ 今期 +6pt</div>
+          <p>計画人数に対する内定見込みを常時表示。会議の冒頭で数字が揃う。</p>
+        </div>
+        <div class="show-card">
+          <div class="show-card__label">離脱ホットスポット</div>
+          <div class="show-card__value">書類</div>
+          <div class="show-card__delta show-card__delta--warn">要フォロー</div>
+          <p>ファネル上で詰まっているフェーズを自動でハイライト。対策の優先順位が明確に。</p>
+        </div>
+        <div class="show-card">
+          <div class="show-card__label">現場の時間</div>
+          <div class="show-card__value">−18%</div>
+          <div class="show-card__delta show-card__delta--up">事務工数</div>
+          <p>重複入力・追跡の削減を、施策導入前後で比較表示（イメージ）。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ファネル -->
+    <section id="funnel" class="show-section">
+      <p class="show-eyebrow">採用ファネル / ダッシュボード</p>
+      <h2 class="show-h2">充足率だけで終わらない。「どこで落ちるか」が会議の主役になる。</h2>
+      <p class="show-lead">
+        KPI カードとファネル推移を同じ画面に置き、トレンドと異常検知を同時に見せます。経営・人事・現場が同じグラフを指さして話せます。
+      </p>
+      <div class="show-alert-strip">
+        <span aria-hidden="true">⚠️</span>
+        <span><strong>アラート例：</strong>「書類選考→一次」の離脱率が、過去3年平均を上回っています。説明会の案内タイミングを確認してください。</span>
+      </div>
+      <div class="show-grid show-grid--2">
+        <div class="show-card">
+          <div class="show-card__label">応募 → 書類合格</div>
+          <div class="show-card__value">62%</div>
+          <div class="show-card__delta show-card__delta--down">▼ 前年比 −4pt</div>
+          <div class="show-spark" aria-hidden="true">
+            <span style="height: 35%"></span><span style="height: 42%"></span><span style="height: 38%"></span><span style="height: 55%"></span><span style="height: 48%"></span><span style="height: 62%"></span>
+          </div>
+          <p>週次の推移をミニチャートで。説明会・説明資料の改善効果を短期で検証。</p>
+        </div>
+        <div class="show-card">
+          <div class="show-card__label">チャネル別 応募（イメージ）</div>
+          <div class="show-bar-row"><span>自社サイト</span><div class="show-bar-track"><div class="show-bar-fill" style="width: 72%"></div></div></div>
+          <div class="show-bar-row"><span>ハローワーク</span><div class="show-bar-track"><div class="show-bar-fill" style="width: 45%"></div></div></div>
+          <div class="show-bar-row"><span>SNS</span><div class="show-bar-track"><div class="show-bar-fill" style="width: 28%"></div></div></div>
+          <p>流入分析と突き合わせて、「どこに金と手を入れるか」をデータで説明。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 応募者分析 -->
+    <section id="applicants" class="show-section">
+      <p class="show-eyebrow">応募者分析</p>
+      <h2 class="show-h2">属性の偏りと「見落とし」を、面接の前に可視化。</h2>
+      <p class="show-lead">
+        地域・職歴・応募経路などの分布と、選考ステージのクロスを見せます。ダイバーシティの説明資料にも、そのまま使える見せ方に。
+      </p>
+      <div class="show-insight">
+        <strong>刺さるポイント：</strong>フォロワー数帯や応募経路と選考進捗を<strong>同じレポート</strong>に載せ、広報と選考の連携がしやすくなります。
+      </div>
+      <div class="show-grid show-grid--3">
+        <div class="show-card">
+          <div class="show-card__label">地域分布（例）</div>
+          <div class="show-card__value">関東 41%</div>
+          <p>遠方応募の割合推移。オンライン説明会の投資対効果を議論可能に。</p>
+        </div>
+        <div class="show-card">
+          <div class="show-card__label">面接官負荷（例）</div>
+          <div class="show-card__value">均等化</div>
+          <div class="show-card__delta show-card__delta--up">スコア 82</div>
+          <p>担当偏りの可視化で、公平性と現場負荷の両方に配慮。</p>
+        </div>
+        <div class="show-card">
+          <div class="show-card__label">フォロワー連動</div>
+          <div class="show-card__value">相関</div>
+          <p>アカウント規模別の応募転換を把握。広報KPIと採用KPIの接続。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 母集団シミュレーター -->
+    <section id="simulator" class="show-section">
+      <p class="show-eyebrow">母集団形成シミュレーター</p>
+      <h2 class="show-h2">「足りないのは人数か、転換率か」を、シナリオで切り分ける。</h2>
+      <p class="show-lead">
+        採用計画の前提（応募数・各段階の通過率）を動かすと、充足見込みがどう変わるかを即座に表示。感覚ではなく、前提の置き場所が会議で共有されます。
+      </p>
+      <div class="show-grid show-grid--2">
+        <div class="show-card">
+          <div class="show-card__label">シナリオ A</div>
+          <div class="show-card__value">充足 ◎</div>
+          <p>説明会回数 +1、書類基準は現状維持 → 目標レンジ内。</p>
+        </div>
+        <div class="show-card">
+          <div class="show-card__label">シナリオ B</div>
+          <div class="show-card__value">ギャップ</div>
+          <div class="show-card__delta show-card__delta--warn">応募 +15% 必要</div>
+          <p>一次通過率が下がった場合に、母集団をどれだけ増やす必要があるかを数値化。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 流入分析 -->
+    <section id="inflow" class="show-section">
+      <p class="show-eyebrow">流入分析</p>
+      <h2 class="show-h2">広報予算の説明を、「チャネル別の成果」で背中を押す。</h2>
+      <p class="show-lead">
+        参照元・キャンペーン・流入経路ごとに、応募・説明会参加までの導線を追跡。単発のバナー露出ではなく、採用に効いた経路がわかります。
+      </p>
+      <div class="show-card">
+        <div class="show-card__label">チャネル別 コストイメージ（例）</div>
+        <div class="show-bar-row"><span>検索広告</span><div class="show-bar-track"><div class="show-bar-fill" style="width: 88%"></div></div> <small>CPA 低</small></div>
+        <div class="show-bar-row"><span>イベント</span><div class="show-bar-track"><div class="show-bar-fill" style="width: 52%"></div></div></div>
+        <div class="show-bar-row"><span>紹介</span><div class="show-bar-track"><div class="show-bar-fill" style="width: 64%"></div></div></div>
+        <p style="margin-top: 1rem">経路ごとに「質」と「量」の両方を見るため、次期の広報ミックスが決めやすい。</p>
+      </div>
+    </section>
+
+    <!-- 行動集計 -->
+    <section id="behavior" class="show-section">
+      <p class="show-eyebrow">求職者行動集計</p>
+      <h2 class="show-h2">個人を特定せずに、「熱量の偏り」は掴む。</h2>
+      <p class="show-lead">
+        ページ閲覧・資料DL・動画視聴などの集計を匿名・集約で提示。どのコンテンツが選考前の意思決定に効いているかの手がかりになります。
+      </p>
+      <div class="show-insight">
+        <strong>刺さるポイント：</strong>プライバシーを守りながら、<strong>コンテンツ改善の優先順位</strong>だけははっきりさせられる設計イメージです。
+      </div>
+      <div class="show-grid show-grid--2">
+        <div class="show-card">
+          <div class="show-card__label">人気コンテンツ</div>
+          <div class="show-card__value">職員インタビュー</div>
+          <p>滞在時間・再訪率が高いコンテンツを特定し、次の制作に反映。</p>
+        </div>
+        <div class="show-card">
+          <div class="show-card__label">離脱の手前</div>
+          <div class="show-card__value">FAQ</div>
+          <div class="show-card__delta show-card__delta--warn">要更新</div>
+          <p>よく見られているのに応募に繋がりにくいページを優先的に改修。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 施策比較 -->
+    <section id="measures" class="show-section">
+      <p class="show-eyebrow">施策比較</p>
+      <h2 class="show-h2">メール・説明会・資料を「同じ物差し」で比較する。</h2>
+      <p class="show-lead">
+        施策ごとに到達・開封・参加・応募までを一画面で比較。A/Bの議論が、感覚ではなく数値ベースに寄ります。
+      </p>
+      <div class="show-steps">
+        <div class="show-step">
+          <div class="show-step-num">1</div>
+          <div>
+            <h4>施策を定義</h4>
+            <p>期間・対象セグメント・チャネルをタグ付け。後から振り返れる。</p>
+          </div>
+        </div>
+        <div class="show-step">
+          <div class="show-step-num">2</div>
+          <div>
+            <h4>成果を接続</h4>
+            <p>応募ID・イベント参加と紐づけ、ファネル上の効果を表示。</p>
+          </div>
+        </div>
+        <div class="show-step">
+          <div class="show-step-num">3</div>
+          <div>
+            <h4>次期に反映</h4>
+            <p>勝ちパターンをテンプレ化し、翌年度の計画にコピー。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI採用支援 -->
+    <section id="ai" class="show-section">
+      <p class="show-eyebrow">AI 採用支援</p>
+      <h2 class="show-h2">週次で「次の一手」が並ぶ。忙しい管理職ほど効く。</h2>
+      <p class="show-lead">
+        データに基づく提案を、求人・説明会・フォローアクションに落とし込むイメージ。ブラックボックスではなく、根拠と優先度がセットで見えるUI が鍵です。
+      </p>
+      <div class="show-grid show-grid--2">
+        <div class="show-card">
+          <div class="show-card__label">推奨アクション（例）</div>
+          <div class="show-card__value">3 件</div>
+          <p>① 特定職種の説明会追加 ② 書類基準のレビュー ③ 広報投稿の頻度調整 — などを優先度付きで提示。</p>
+        </div>
+        <div class="show-card">
+          <div class="show-card__label">説明責任</div>
+          <div class="show-card__value">根拠付き</div>
+          <p>各提案に、どの指標のどの変化に基づくかを短文で表示（設計イメージ）。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 求人・選考オペ -->
+    <section id="ops" class="show-section">
+      <p class="show-eyebrow">求人管理・応募者管理</p>
+      <h2 class="show-h2">日常オペは「速く・漏れなく」。分析画面と同じ世界観で。</h2>
+      <p class="show-lead">
+        求人情報の掲載状況、応募のステータス、メッセージ履歴を一貫したUI で。ダッシュボードで見た課題を、すぐ操作画面で潰しにいける導線が重要です。
+      </p>
+      <div class="show-grid show-grid--3">
+        <div class="show-card">
+          <div class="show-card__label">求人</div>
+          <div class="show-card__value">掲載中 12</div>
+          <p>期限・職種・充足状況を一覧。ドラフトと本番の差分も把握。</p>
+        </div>
+        <div class="show-card">
+          <div class="show-card__label">応募者</div>
+          <div class="show-card__value">対応待ち 8</div>
+          <div class="show-card__delta show-card__delta--warn">SLA 注意</div>
+          <p>ステータスと期限でソート。見落としゼロを目指すオペ設計。</p>
+        </div>
+        <div class="show-card">
+          <div class="show-card__label">コミュニケーション</div>
+          <div class="show-card__value">一元化</div>
+          <p>応募者とのやり取りを履歴として残し、引き継ぎが容易に。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 選考・面接 -->
+    <section id="selection" class="show-section">
+      <p class="show-eyebrow">選考管理・面接・フォロー</p>
+      <h2 class="show-h2">フェーズごとの滞留と面接枠を、同じタイムラインで。</h2>
+      <p class="show-lead">
+        応募者ごとの選考結果の統合ビュー、面接日程の調整、追加情報の依頼、アンケート送付までを一連のストーリーとして見せます。「誰がどこで止まっているか」が一覧でわかることが、現場の安心材料になります。
+      </p>
+      <div class="show-grid show-grid--2">
+        <div class="show-card">
+          <div class="show-card__label">フェーズ別滞留（例）</div>
+          <div class="show-card__value">二次 14名</div>
+          <div class="show-card__delta show-card__delta--warn">平均滞在 12日</div>
+          <p>合格通知〜次フェーズ案内のリードタイムを短縮するアクションに直結。</p>
+        </div>
+        <div class="show-card">
+          <div class="show-card__label">一斉連絡・個別メッセージ</div>
+          <div class="show-card__value">到達率</div>
+          <div class="show-card__delta show-card__delta--up">開封 68%</div>
+          <p>説明会案内・試験通知などをセグメント配信し、効果を施策比較画面へ接続。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- コンテンツ・広報 -->
+    <section id="content" class="show-section">
+      <p class="show-eyebrow">採用広報（ブログ・お知らせ）</p>
+      <h2 class="show-h2">発信内容と成果をつなぐ。「書いたあと」が可視化される。</h2>
+      <p class="show-lead">
+        記事・お知らせの公開状況だけでなく、流入・応募への寄与を（他画面と組み合わせて）追えるイメージ。広報担当と人事が同じダッシュボードを見られます。
+      </p>
+      <div class="show-card">
+        <div class="show-card__label">コンテンツカレンダー（イメージ）</div>
+        <p>説明会前後に寄せた投稿の効果測定、リピート訪問率の変化 — を月単位で振り返り。</p>
+      </div>
+    </section>
+
+    <!-- カレンダー -->
+    <section id="calendar" class="show-section">
+      <p class="show-eyebrow">採用スケジュール</p>
+      <h2 class="show-h2">説明会・試験・締切を、組織で一つのカレンダーに。</h2>
+      <p class="show-lead">
+        内部の採用イベントと、求職者向けの公開スケジュールを整合させます。ダブルブッキングと「案内だけ出て現場が追いついていない」を防ぐための配置イメージです。
+      </p>
+      <div class="show-grid show-grid--2">
+        <div class="show-card">
+          <div class="show-card__label">今月のハイライト</div>
+          <div class="show-card__value">説明会 4</div>
+          <p>地域別・職種別の枠と、定員充足率を併記（イメージ）。</p>
+        </div>
+        <div class="show-card">
+          <div class="show-card__label">連動</div>
+          <div class="show-card__value">通知</div>
+          <p>応募締切の前週に、内部リマインドと広報投稿を促す — などのワークフロー想定。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- プロフィール・組織 -->
+    <section id="profile" class="show-section">
+      <p class="show-eyebrow">組織プロフィール・設定</p>
+      <h2 class="show-h2">求職者に見える「顔」と、内部の権限を分けて管理。</h2>
+      <p class="show-lead">
+        組織紹介・ロゴ・連絡窓口・採用ページの公開範囲。ロール別の操作権限で、監査とスピードの両立を図る管理画面のイメージです。
+      </p>
+      <div class="show-insight">
+        <strong>刺さるポイント：</strong>外に見えるブランドと、内側のガバナンスを<strong>同じプロダクト</strong>で扱えること自体が、官公庁向けの安心材料になります。
+      </div>
+    </section>
+
+    <!-- 請求・利用（管理者向け） -->
+    <section id="billing" class="show-section">
+      <p class="show-eyebrow">請求・利用状況（管理者向け）</p>
+      <h2 class="show-h2">導入効果を語るとき、契約・利用の整理も一枚で。</h2>
+      <p class="show-lead">
+        請求情報や利用履歴の確認は、経理・監査とのやり取りで手間になりがちです。採用担当と管理者が同じコンソールで状況を共有できるイメージを置き、導入後の「説明コスト」を下げます。
+      </p>
+      <div class="show-card">
+        <div class="show-card__label">イメージ</div>
+        <p style="margin: 0">
+          期間・プラン・オプション利用の一覧、ダウンロード履歴との対応。採用KPI の画面と並べて、<strong>投資対効果の説明</strong>がしやすい資料構成を想定。
+        </p>
+      </div>
+    </section>
+
+    <footer class="show-footer-cta">
+      <p>本ページは営業・要件共有用の静的ショーケースです。実装の詳細は Nuxt クライアントの employer ルートおよび recruit/docs を参照してください。</p>
+    </footer>
+  </body>
+</html>

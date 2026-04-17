@@ -20,11 +20,14 @@ python3 -m http.server 8080
 3. **Build and deployment** で **Source** を **Deploy from a branch** にする  
 4. **Branch** を `main` / フォルダ **`/(root)`** を選んで Save  
 
-数分後、次のような URL で公開されます（`ユーザー名` と `リポジトリ名` は置き換え）:
+このリポジトリの公開 URL（GitHub Pages）:
 
-`https://<ユーザー名>.github.io/<リポジトリ名>/`
+**https://akirasato0926.github.io/public-connect-recruit-lp/**
 
-トップの `index.html` がそのまま表示されます。
+（反映まで数分かかることがあります。404 のときはしばらく待ってから再読み込みしてください。）
+
+採用モック HTML は **`/recruit/mock/`** です。  
+例: https://akirasato0926.github.io/public-connect-recruit-lp/recruit/mock/
 
 ## フォルダ構成（主要）
 

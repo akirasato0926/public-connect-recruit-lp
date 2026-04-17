@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUBLIC CONNECT — 官公庁コンソール参照（営業・Figma用）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pc-primary: #0871e1;
+      --pc-text: #333333;
+      --pc-muted: #a3a8ad;
+      --pc-border: #dadcde;
+      --pc-bg: #f8f8f8;
+      --pc-surface: #ffffff;
+      --pc-secondary-tint: #e6f1fc;
+      --pc-radius: 12px;
+      --pc-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
+      background: var(--pc-bg);
+      color: var(--pc-text);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .frame {
+      max-width: 1280px;
+      margin: 0 auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* ヘッダー（簡略化した HeaderEmployer イメージ） */
+    .app-header {
+      background: var(--pc-surface);
+      border-bottom: 1px solid var(--pc-border);
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      font-family: "Manrope", "Noto Sans JP", sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      color: var(--pc-text);
+    }
+    .brand span { color: var(--pc-primary); }
+    /* タブナビ（RouterOfMemberOfEmployer 相当・スクロール可） */
+    .tab-strip {
+      background: var(--pc-surface);
+      border-bottom: 1px solid var(--pc-border);
+      padding: 0 16px;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .tab {
+      padding: 14px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--pc-muted);
+      border-bottom: 3px solid transparent;
+      cursor: default;
+    }
+    .tab.is-active {
+      color: var(--pc-text);
+      border-bottom-color: var(--pc-primary);
+    }
+    .tab.is-new { color: var(--pc-primary); }
+    .main {
+      flex: 1;
+      padding: 24px;
+    }
+    .page-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .page-title h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .page-title p {
+      margin: 6px 0 0;
+      font-size: 13px;
+      color: var(--pc-muted);
+    }
+    .btn-primary {
+      background: var(--pc-primary);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 18px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: default;
+      font-family: inherit;
+    }
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 900px) {
+      .kpi-row { grid-template-columns: repeat(2, 1fr); }
+    }
+    .card {
+      background: var(--pc-surface);
+      border: 1px solid var(--pc-border);
+      border-radius: var(--pc-radius);
+      box-shadow: var(--pc-shadow);
+      padding: 16px;
+    }
+    .card label {
+      display: block;
+      font-size: 12px;
+      color: var(--pc-muted);
+      margin-bottom: 6px;
+    }
+    .card .value {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .panel {
+      background: var(--pc-surface);
+      border: 1px solid var(--pc-border);
+      border-radius: var(--pc-radius);
+      box-shadow: var(--pc-shadow);
+      overflow: hidden;
+    }
+    .panel-head {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--pc-border);
+      font-weight: 700;
+      font-size: 14px;
+      background: var(--pc-secondary-tint);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--pc-border);
+    }
+    th {
+      background: #f1f2f3;
+      font-weight: 700;
+      color: var(--pc-text);
+    }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .note {
+      margin-top: 24px;
+      padding: 12px 16px;
+      background: var(--pc-secondary-tint);
+      border-radius: 8px;
+      font-size: 12px;
+      color: var(--pc-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <header class="app-header">
+      <div class="brand">PUBLIC <span>CONNECT</span> — 採用担当</div>
+      <button type="button" class="btn-primary">お知らせ</button>
+    </header>
+    <nav class="tab-strip" aria-label="官公庁メニュー（抜粋）">
+      <div class="tab">官公庁情報</div>
+      <div class="tab">求人管理</div>
+      <div class="tab">応募者管理</div>
+      <div class="tab is-active is-new">採用分析</div>
+      <div class="tab is-new">応募者分析</div>
+      <div class="tab is-new">母集団計画</div>
+      <div class="tab is-new">流入分析</div>
+      <div class="tab is-new">行動集計</div>
+      <div class="tab is-new">施策比較</div>
+      <div class="tab is-new">AI採用支援</div>
+      <div class="tab">ブログ・動画</div>
+      <div class="tab">採用案内</div>
+      <div class="tab">予定管理</div>
+    </nav>
+    <main class="main">
+      <div class="page-title">
+        <div>
+          <h1>採用ファネルダッシュボード</h1>
+          <p>求人別の進捗・充足率・滞留を一覧する画面（参照用ダミー文言）</p>
+        </div>
+        <button type="button" class="btn-primary">CSV出力</button>
+      </div>
+      <div class="kpi-row">
+        <div class="card"><label>採用目標（合計）</label><div class="value">35</div></div>
+        <div class="card"><label>エントリー</label><div class="value">420</div></div>
+        <div class="card"><label>内定承諾</label><div class="value">19</div></div>
+        <div class="card"><label>充足率</label><div class="value" style="color:#fe4b28">54%</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">求人別サマリー</div>
+        <table>
+          <thead>
+            <tr>
+              <th>求人</th>
+              <th class="num">目標</th>
+              <th class="num">承諾</th>
+              <th class="num">充足率</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>一般行政職</td><td class="num">10</td><td class="num">4</td><td class="num">40%</td></tr>
+            <tr><td>土木技術職</td><td class="num">5</td><td class="num">5</td><td class="num">100%</td></tr>
+            <tr><td>福祉職</td><td class="num">8</td><td class="num">2</td><td class="num">25%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">
+        本 HTML は営業・Figma 取り込み用参照です。色・角丸・影はクライアントの tailwind / variables から抽出しています。本番画面と完全一致しません。
+      </p>
+    </main>
+  </div>
+</body>
+</html>

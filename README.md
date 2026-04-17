@@ -41,3 +41,4 @@ python3 -m http.server 8080
 | `styles.css` / `script.js` | スタイル・スクリプト |
 | `assets/` | データ等 |
 | `recruit/` | 採用ドキュメント・モック |
+| `recruit/figma-handoff/` | **営業/Figma用** トークン表・参照HTML・SVG（本番UI色に寄せた素材） |

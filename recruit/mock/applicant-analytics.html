@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>モック: 応募者分析</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <nav class="mock-chrome">
+    <a class="mock-back" href="./index.html">← モック一覧</a>
+    <span class="mock-badge">静的UIモック</span>
+  </nav>
+  <main class="mock-page">
+    <section class="mock-shell">
+      <header class="mock-topbar">
+        <div>
+          <p class="eyebrow">Analytics</p>
+          <h1>応募者分析</h1>
+          <p class="lead">属性・面接官向けメモ・フォロワー・ブログ指標を1画面で俯瞰する想定です。</p>
+        </div>
+        <div class="topbar-actions">
+          <button class="primary-btn" type="button">再読込（ダミー）</button>
+        </div>
+      </header>
+
+      <section class="kpi-grid" style="grid-template-columns: repeat(3, 1fr)">
+        <article class="kpi-card"><p>総応募者</p><h2>842</h2></article>
+        <article class="kpi-card"><p>男性 / 女性</p><h2>52% / 45%</h2></article>
+        <article class="kpi-card"><p>30〜45歳比率</p><h2>61%</h2></article>
+      </section>
+
+      <section class="main-grid">
+        <article class="panel">
+          <div class="panel-head"><h3>都道府県（上位）</h3><span>ダミー</span></div>
+          <table class="data-table">
+            <thead><tr><th>地域</th><th class="num">人数</th></tr></thead>
+            <tbody>
+              <tr><td>北海道</td><td class="num">312</td></tr>
+              <tr><td>東京都</td><td class="num">98</td></tr>
+              <tr><td>神奈川県</td><td class="num">76</td></tr>
+            </tbody>
+          </table>
+        </article>
+        <article class="panel">
+          <div class="panel-head"><h3>フォロワー・応募</h3><span>90日</span></div>
+          <p style="color:var(--muted);font-size:0.9rem;margin-bottom:0.75rem">新規応募（90日）: <strong style="color:var(--text)">124</strong> / フォロワー: <strong style="color:var(--text)">1,240</strong></p>
+          <div class="chart-fake" aria-hidden="true">
+            <span style="height:40%"></span><span style="height:55%"></span><span style="height:48%"></span><span style="height:62%"></span><span style="height:50%"></span>
+          </div>
+          <p class="lead" style="margin-top:0.75rem">※ 棒は月次フォロワー増のイメージです。</p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h3>面接官向け支援レポート（抜粋）</h3><span>直近応募者</span></div>
+        <div class="summary-grid" style="grid-template-columns:1fr">
+          <article class="action-card" style="clear:both">
+            <span class="prio">共有用</span>
+            <p style="font-weight:700;margin-bottom:0.5rem">応募者 #1204 / 一般行政職</p>
+            <ul class="alert-list"><li><strong>要点</strong><span>地域課題への関心が一貫している／数値目標の言及が薄い</span></li></ul>
+            <textarea class="textarea-mock" readonly>【面接官向けメモ】応募者ID: 1204
+確認推奨: 志望動機の具体化、ストレス事例の深掘り。</textarea>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h3>ブログパフォーマンス</h3><span>累計</span></div>
+        <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr)">
+          <article class="kpi-card"><p>総閲覧</p><h2>12.4k</h2></article>
+          <article class="kpi-card"><p>総シェア</p><h2>428</h2></article>
+          <article class="kpi-card"><p>記事数</p><h2>36</h2></article>
+          <article class="kpi-card"><p>平均閲覧/記事</p><h2>345</h2></article>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

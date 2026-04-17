@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>モック: 母集団計画（シミュレーター）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <nav class="mock-chrome">
+    <a class="mock-back" href="./index.html">← モック一覧</a>
+    <span class="mock-badge">静的UIモック</span>
+  </nav>
+  <main class="mock-page">
+    <section class="mock-shell">
+      <header class="mock-topbar">
+        <div>
+          <p class="eyebrow">Simulator</p>
+          <h1>母集団形成シミュレーター</h1>
+          <p class="lead">目標内定数に対し、現在のファネルからの不足を可視化し、打ち手の優先度を並べる想定です。</p>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div class="panel-head"><h3>シミュレーション条件</h3><span>操作イメージ</span></div>
+        <p style="color:var(--muted);margin-bottom:0.75rem">目標内定承諾数（スライダー風・固定表示）</p>
+        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+          <input type="range" disabled value="40" style="flex:1;min-width:200px" />
+          <strong style="font-size:1.5rem;color:var(--text)">40</strong><span class="chip">名</span>
+        </div>
+      </section>
+
+      <section class="main-grid">
+        <article class="panel">
+          <div class="panel-head"><h3>ギャップサマリー</h3><span>ダミー</span></div>
+          <div class="kpi-grid" style="grid-template-columns:1fr 1fr;gap:0.75rem">
+            <article class="kpi-card is-alert"><p>不足内定（推定）</p><h2>12</h2></article>
+            <article class="kpi-card"><p>必要エントリー増（目安）</p><h2>+180</h2></article>
+          </div>
+        </article>
+        <article class="panel">
+          <div class="panel-head"><h3>求人別ギャップ</h3><span>優先度高</span></div>
+          <table class="data-table">
+            <thead><tr><th>求人</th><th class="num">ギャップ</th><th>示唆</th></tr></thead>
+            <tbody>
+              <tr><td>福祉職</td><td class="num">-6</td><td>広報強化</td></tr>
+              <tr><td>一般行政</td><td class="num">-4</td><td>説明会誘導</td></tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h3>推奨アクション（レコメンド）</h3><span>3件</span></div>
+        <ul class="alert-list">
+          <li><strong>フォロワー向け配信</strong><span>未応募セグメントへリマインド</span></li>
+          <li><strong>ブログ連載</strong><span>現場インタビュー第2弾を掲載</span></li>
+          <li><strong>検索連携</strong><span>求人タイトルのキーワード最適化</span></li>
+        </ul>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

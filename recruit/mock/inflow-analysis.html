@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>モック: 流入分析</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <nav class="mock-chrome">
+    <a class="mock-back" href="./index.html">← モック一覧</a>
+    <span class="mock-badge">静的UIモック</span>
+  </nav>
+  <main class="mock-page">
+    <section class="mock-shell">
+      <header class="mock-topbar">
+        <div>
+          <p class="eyebrow">Inflow</p>
+          <h1>流入分析</h1>
+          <p class="lead">チャネル別のセッション・応募・転換を俯瞰するダッシュボード案です。</p>
+        </div>
+        <div class="topbar-actions"><span class="chip">期間: 過去30日</span></div>
+      </header>
+
+      <section class="kpi-grid" style="grid-template-columns:repeat(4,1fr)">
+        <article class="kpi-card"><p>セッション</p><h2>24.1k</h2></article>
+        <article class="kpi-card"><p>応募完了</p><h2>418</h2></article>
+        <article class="kpi-card"><p>応募転換率</p><h2>1.7%</h2></article>
+        <article class="kpi-card"><p>新規ユーザー比</p><h2>62%</h2></article>
+      </section>
+
+      <section class="main-grid">
+        <article class="panel">
+          <div class="panel-head"><h3>チャネル別</h3><span>ダミー</span></div>
+          <table class="data-table">
+            <thead><tr><th>チャネル</th><th class="num">セッション</th><th class="num">応募</th><th class="num">CVR</th></tr></thead>
+            <tbody>
+              <tr><td>自然検索</td><td class="num">9,200</td><td class="num">162</td><td class="num">1.8%</td></tr>
+              <tr><td>求人サイト</td><td class="num">7,800</td><td class="num">141</td><td class="num">1.8%</td></tr>
+              <tr><td>直接・ブックマーク</td><td class="num">4,100</td><td class="num">78</td><td class="num">1.9%</td></tr>
+              <tr><td>SNS参照</td><td class="num">3,000</td><td class="num">37</td><td class="num">1.2%</td></tr>
+            </tbody>
+          </table>
+        </article>
+        <article class="panel">
+          <div class="panel-head"><h3>推移（イメージ）</h3><span>週次</span></div>
+          <div class="chart-fake"><span style="height:35%"></span><span style="height:42%"></span><span style="height:50%"></span><span style="height:48%"></span><span style="height:55%"></span><span style="height:52%"></span></div>
+          <p class="lead" style="margin-top:0.75rem">各棒は週のセッション数の相対イメージです。</p>
+        </article>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

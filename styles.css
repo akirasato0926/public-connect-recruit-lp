@@ -562,6 +562,16 @@ h2 {
   padding: 1rem 0 2.4rem;
 }
 
+.site-footer .footer-note {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+}
+
+.site-footer .footer-note a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
 .site-footer small {
   color: var(--muted);
 }

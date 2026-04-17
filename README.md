@@ -26,8 +26,10 @@ python3 -m http.server 8080
 
 （反映まで数分かかることがあります。404 のときはしばらく待ってから再読み込みしてください。）
 
-採用モック HTML は **`/recruit/mock/`** です。  
-例: https://akirasato0926.github.io/public-connect-recruit-lp/recruit/mock/
+官公庁向け **UIモック一覧（静的）** は次から入れます（サーバ不要）。  
+**https://akirasato0926.github.io/public-connect-recruit-lp/recruit/mock/index.html**
+
+旧・単体のファネルだけ見る場合: `recruit/mock/funnel-dashboard.html`
 
 ## フォルダ構成（主要）
 

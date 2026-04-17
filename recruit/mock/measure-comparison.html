@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>モック: 施策比較</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <nav class="mock-chrome">
+    <a class="mock-back" href="./index.html">← モック一覧</a>
+    <span class="mock-badge">静的UIモック</span>
+  </nav>
+  <main class="mock-page">
+    <section class="mock-shell">
+      <header class="mock-topbar">
+        <div>
+          <p class="eyebrow">Compare</p>
+          <h1>施策比較</h1>
+          <p class="lead">求人軸と官公庁軸を切り替え、通知施策と Webhook 由来のイベントを並べて見る UI イメージです。</p>
+        </div>
+      </header>
+
+      <div class="pill-row" style="margin-bottom:1rem">
+        <span class="pill is-active">求人軸</span>
+        <span class="pill">官公庁軸</span>
+        <span class="pill">Webhook集計 90日</span>
+      </div>
+
+      <section class="kpi-grid" style="grid-template-columns: repeat(4, 1fr)">
+        <article class="kpi-card"><p>配信施策数</p><h2>18</h2></article>
+        <article class="kpi-card"><p>推定開封率</p><h2>34%</h2></article>
+        <article class="kpi-card"><p>推定CTR</p><h2>8%</h2></article>
+        <article class="kpi-card"><p>Webhook開封/クリック</p><h2>412 / 96</h2></article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h3>軸別パフォーマンス</h3><span>ダミーデータ</span></div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>軸</th>
+              <th class="num">閲覧</th>
+              <th class="num">応募</th>
+              <th class="num">承諾</th>
+              <th class="num">応募転換</th>
+              <th class="num">応募→承諾</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>求人A / 一般行政</td><td class="num">12,400</td><td class="num">210</td><td class="num">18</td><td class="num">1.7%</td><td class="num">8.6%</td></tr>
+            <tr><td>求人B / 土木</td><td class="num">8,200</td><td class="num">142</td><td class="num">12</td><td class="num">1.7%</td><td class="num">8.5%</td></tr>
+            <tr><td>求人C / 福祉</td><td class="num">6,100</td><td class="num">88</td><td class="num">5</td><td class="num">1.4%</td><td class="num">5.7%</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

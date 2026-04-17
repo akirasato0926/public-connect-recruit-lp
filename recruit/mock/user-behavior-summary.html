@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>モック: 匿名行動集計</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <nav class="mock-chrome">
+    <a class="mock-back" href="./index.html">← モック一覧</a>
+    <span class="mock-badge">静的UIモック · 匿名</span>
+  </nav>
+  <main class="mock-page">
+    <section class="mock-shell">
+      <header class="mock-topbar">
+        <div>
+          <p class="eyebrow">Privacy-safe</p>
+          <h1>匿名行動集計</h1>
+          <p class="lead">個人を特定しない集計のみ表示する画面のイメージです。</p>
+        </div>
+      </header>
+
+      <p class="banner-note">本番では集計粒度・保存期間はポリシーに従います（モックでは説明のみ）。</p>
+
+      <section class="kpi-grid" style="grid-template-columns:repeat(3,1fr)">
+        <article class="kpi-card"><p>求人閲覧（UU）</p><h2>8,420</h2></article>
+        <article class="kpi-card"><p>平均滞在（中央値）</p><h2>3m12s</h2></article>
+        <article class="kpi-card"><p>お気に入り登録</p><h2>1,035</h2></article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h3>求人別関心度（匿名スコア）</h3><span>上位</span></div>
+        <table class="data-table">
+          <thead><tr><th>求人</th><th class="num">閲覧回数</th><th class="num">お気に入り</th><th class="num">スコア</th></tr></thead>
+          <tbody>
+            <tr><td>一般行政職</td><td class="num">4,200</td><td class="num">312</td><td class="num">92</td></tr>
+            <tr><td>土木技術職</td><td class="num">2,100</td><td class="num">140</td><td class="num">78</td></tr>
+            <tr><td>福祉職</td><td class="num">1,880</td><td class="num">98</td><td class="num">71</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h3>時間帯ヒート（イメージ）</h3><span>アクセス相対値</span></div>
+        <div class="chart-fake" style="height:100px"><span style="height:30%"></span><span style="height:45%"></span><span style="height:70%"></span><span style="height:85%"></span><span style="height:60%"></span><span style="height:40%"></span><span style="height:25%"></span></div>
+        <p class="lead" style="margin-top:0.75rem">左から早朝〜夜の帯の相対アクセスです（ダミー）。</p>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
